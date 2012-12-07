@@ -61,12 +61,12 @@
   <customWorkspace>/var/lib/jenkins/jobs/dtolabs-xmlstarlet-rpm-master/workspace/xmlstarlet-rpm</customWorkspace>
   <builders>
     <hudson.tasks.Shell>
-      <command>rerun -M /var/lib/jenkins/jobs/dtolabs-xmlstarlet-rpm-master/workspace xmlstarlet-rpm:build</command>
+      <command>rerun -M /var/lib/jenkins/jobs/dtolabs-xmlstarlet-rpm-master/workspace xmlstarlet-rpm:build --version 1.3.1 --build-number 1</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.ArtifactArchiver>
-      <artifacts>xmlstarlet-*-$BUILD_NUMBER.el*.*.rpm</artifacts>
+      <artifacts>xmlstarlet-1.3.1-1.el*.*.rpm</artifacts>
       <latestOnly>false</latestOnly>
     </hudson.tasks.ArtifactArchiver>
     <hudson.tasks.Mailer>
